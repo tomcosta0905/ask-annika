@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Tips — Annika</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg:#F5F2ED; --surface:#FFFEF9; --surface2:#F0EDE7; --border:#DDD9D0;
-  --text:#1A1814; --text2:#6B6760; --text3:#9E9B95;
-  --green:#2D6A4F; --green-bg:#D8F3DC; --accent:#2D6A4F;
-  --radius:10px; --radius-lg:16px;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'DM Mono',monospace;background:var(--bg);color:var(--text);font-size:14px;line-height:1.7;min-height:100vh;display:flex;flex-direction:column;}
-.header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:10px;}
-.header a{text-decoration:none;display:flex;align-items:center;gap:10px;}
-.header h1{font-family:'Fraunces',serif;font-weight:300;font-size:20px;color:var(--accent);letter-spacing:-.3px;}
-.header .back{font-size:11px;color:var(--text3);margin-left:auto;}
-.header .back:hover{color:var(--accent);}
-.content{max-width:600px;margin:0 auto;padding:32px 20px 60px;}
-.page-title{font-family:'Fraunces',serif;font-weight:300;font-size:28px;color:var(--text);letter-spacing:-.5px;margin-bottom:6px;}
-.page-sub{font-size:12px;color:var(--text3);margin-bottom:32px;}
-.tip{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 22px;margin-bottom:14px;}
-.tip-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
-.tip-icon{width:32px;height:32px;border-radius:8px;background:var(--green-bg);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
-.tip-title{font-family:'Fraunces',serif;font-weight:500;font-size:16px;color:var(--text);letter-spacing:-.2px;}
-.tip p{font-size:13px;color:var(--text2);line-height:1.65;}
-.tip .example{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;margin-top:10px;font-size:12px;color:var(--text);display:flex;align-items:flex-start;gap:6px;}
-.example-label{color:var(--text3);flex-shrink:0;font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding-top:1px;}
-.example em{font-style:normal;color:var(--accent);}
-.footer{margin-top:auto;border-top:1px solid var(--border);padding:16px 20px;text-align:center;font-size:11px;color:var(--text3);}
-.footer a{color:var(--text3);text-decoration:none;}
-.footer a:hover{color:var(--accent);}
-@media(max-width:640px){
-  .content{padding:24px 16px 48px;}
-  .page-title{font-size:24px;}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips — Annika</title>
+  <meta name="description" content="Getting the most from Annika — tips for logging food, saving staples, and tracking your nutrition.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf6f1;
+      --terracotta: #c9826b;
+      --brown: #5c3d2e;
+      --brown-light: #8a6455;
+      --brown-faint: #ede5de;
+    }
+    html { font-size: 16px; }
+    body { background: var(--cream); color: var(--brown); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+    nav { padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo svg { display: block; width: 320px; height: auto; }
+    nav a { color: var(--brown-light); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.2s; }
+    nav a:hover { color: var(--terracotta); }
+    .content { max-width: 640px; margin: 0 auto; padding: 40px 48px 80px; }
+    .page-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 400; color: var(--brown); line-height: 1.2; margin-bottom: 8px; }
+    .page-sub { font-size: 0.9rem; color: var(--brown-light); margin-bottom: 48px; }
+    .tip { border: 1px solid var(--brown-faint); border-radius: 8px; padding: 24px 28px; margin-bottom: 16px; background: #fff; }
+    .tip-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .tip-icon { width: 34px; height: 34px; border-radius: 8px; background: var(--brown-faint); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    .tip-title { font-family: 'DM Serif Display', serif; font-size: 1.1rem; font-weight: 400; color: var(--brown); }
+    .tip p { font-size: 0.88rem; color: var(--brown-light); line-height: 1.65; }
+    .example { background: var(--cream); border: 1px solid var(--brown-faint); border-radius: 6px; padding: 9px 14px; margin-top: 10px; font-size: 0.82rem; color: var(--brown); display: flex; align-items: flex-start; gap: 8px; }
+    .example-label { color: var(--brown-light); flex-shrink: 0; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; padding-top: 1px; }
+    .example em { font-style: normal; color: var(--terracotta); }
+    footer { margin-top: auto; border-top: 1px solid var(--brown-faint); padding: 32px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    footer p { font-size: 0.78rem; color: var(--brown-light); }
+    footer a { font-size: 0.78rem; color: var(--brown-light); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--terracotta); }
+    @media (max-width: 600px) { nav { padding: 20px 24px; } .content { padding: 24px 24px 60px; } footer { padding: 24px; flex-direction: column; align-items: flex-start; } }
+  </style>
 </head>
 <body>
-<header class="header">
-  <a href="/">
-    <svg width="28" height="28" viewBox="0 0 72 72" fill="none">
-      <rect width="72" height="72" rx="16" fill="#2D6A4F"/>
-      <path d="M36 6 C26 10 18 20 18 36 C18 52 26 62 36 66 C46 62 54 52 54 36 C54 20 46 10 36 6 Z" fill="#52B788" opacity="0.3"/>
-      <path d="M36 6 C26 10 18 20 18 36 C18 52 26 62 36 66 C46 62 54 52 54 36 C54 20 46 10 36 6 Z" stroke="white" stroke-width="1.5" fill="none"/>
-      <rect x="26" y="37" width="5" height="18" rx="1.5" fill="white" opacity="0.8"/>
-      <rect x="33" y="27" width="5" height="28" rx="1.5" fill="white" opacity="0.92"/>
-      <rect x="40" y="18" width="5" height="37" rx="1.5" fill="white"/>
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="160" height="48" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(20,30)">
+        <path d="M12,0 L34,0 Q46,0 46,12 L46,26 Q46,38 34,38 L36,38 L42,52 L26,38 L12,38 Q0,38 0,26 L0,12 Q0,0 12,0 Z" fill="#c9826b"/>
+        <circle cx="11" cy="19" r="3" fill="#faf6f1" opacity="0.95"/>
+        <circle cx="23" cy="19" r="3" fill="#faf6f1" opacity="0.95"/>
+        <circle cx="35" cy="19" r="3" fill="#faf6f1" opacity="0.95"/>
+        <text x="60" y="28" font-family="'DM Sans', Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="300" letter-spacing="5" fill="#5c3d2e">annika</text>
+        <text x="62" y="48" font-family="'DM Sans', Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" letter-spacing="1.4" fill="#c9826b">just text it.</text>
+      </g>
     </svg>
-    <h1>Annika</h1>
   </a>
-  <a href="/" class="back">← Back</a>
-</header>
+  <a href="/">← Back</a>
+</nav>
 <main class="content">
   <h2 class="page-title">Getting the most from Annika</h2>
   <p class="page-sub">Everything you need to know, in about two minutes.</p>
@@ -123,8 +125,9 @@ body{font-family:'DM Mono',monospace;background:var(--bg);color:var(--text);font
     <p>Mid-conversation and want to start fresh? Text "cancel" and Annika resets the thread.</p>
   </div>
 </main>
-<footer class="footer">
-  © 2026 Annika. <a href="/privacy.html">Privacy Policy</a>
+<footer>
+  <p>© 2026 Annika. Nutrition tracking, simplified.</p>
+  <a href="privacy.html">Privacy Policy</a>
 </footer>
 </body>
 </html>
