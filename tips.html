@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Tips — Annika</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#F5F2ED; --surface:#FFFEF9; --surface2:#F0EDE7; --border:#DDD9D0;
+  --text:#1A1814; --text2:#6B6760; --text3:#9E9B95;
+  --green:#2D6A4F; --green-bg:#D8F3DC; --accent:#2D6A4F;
+  --radius:10px; --radius-lg:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Mono',monospace;background:var(--bg);color:var(--text);font-size:14px;line-height:1.7;min-height:100vh;display:flex;flex-direction:column;}
+.header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:10px;}
+.header a{text-decoration:none;display:flex;align-items:center;gap:10px;}
+.header h1{font-family:'Fraunces',serif;font-weight:300;font-size:20px;color:var(--accent);letter-spacing:-.3px;}
+.header .back{font-size:11px;color:var(--text3);margin-left:auto;}
+.header .back:hover{color:var(--accent);}
+.content{max-width:600px;margin:0 auto;padding:32px 20px 60px;}
+.page-title{font-family:'Fraunces',serif;font-weight:300;font-size:28px;color:var(--text);letter-spacing:-.5px;margin-bottom:6px;}
+.page-sub{font-size:12px;color:var(--text3);margin-bottom:32px;}
+.tip{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 22px;margin-bottom:14px;}
+.tip-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tip-icon{width:32px;height:32px;border-radius:8px;background:var(--green-bg);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.tip-title{font-family:'Fraunces',serif;font-weight:500;font-size:16px;color:var(--text);letter-spacing:-.2px;}
+.tip p{font-size:13px;color:var(--text2);line-height:1.65;}
+.tip .example{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;margin-top:10px;font-size:12px;color:var(--text);display:flex;align-items:flex-start;gap:6px;}
+.example-label{color:var(--text3);flex-shrink:0;font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding-top:1px;}
+.example em{font-style:normal;color:var(--accent);}
+.footer{margin-top:auto;border-top:1px solid var(--border);padding:16px 20px;text-align:center;font-size:11px;color:var(--text3);}
+.footer a{color:var(--text3);text-decoration:none;}
+.footer a:hover{color:var(--accent);}
+@media(max-width:640px){
+  .content{padding:24px 16px 48px;}
+  .page-title{font-size:24px;}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <a href="/">
+    <svg width="28" height="28" viewBox="0 0 72 72" fill="none">
+      <rect width="72" height="72" rx="16" fill="#2D6A4F"/>
+      <path d="M36 6 C26 10 18 20 18 36 C18 52 26 62 36 66 C46 62 54 52 54 36 C54 20 46 10 36 6 Z" fill="#52B788" opacity="0.3"/>
+      <path d="M36 6 C26 10 18 20 18 36 C18 52 26 62 36 66 C46 62 54 52 54 36 C54 20 46 10 36 6 Z" stroke="white" stroke-width="1.5" fill="none"/>
+      <rect x="26" y="37" width="5" height="18" rx="1.5" fill="white" opacity="0.8"/>
+      <rect x="33" y="27" width="5" height="28" rx="1.5" fill="white" opacity="0.92"/>
+      <rect x="40" y="18" width="5" height="37" rx="1.5" fill="white"/>
+    </svg>
+    <h1>Annika</h1>
+  </a>
+  <a href="/" class="back">← Back</a>
+</header>
+<main class="content">
+  <h2 class="page-title">Getting the most from Annika</h2>
+  <p class="page-sub">Everything you need to know, in about two minutes.</p>
+  <div class="tip">
+    <div class="tip-header">
+      <div class="tip-icon">🍳</div>
+      <div class="tip-title">Logging food</div>
+    </div>
+    <p>Just text what you ate, like you'd tell a friend. Annika handles the nutrition lookup — calories, protein, carbs, fat, fiber, and sodium.</p>
+    <div class="example"><span class="example-label">Try</span><span><em>Two eggs and toast with butter</em></span></div>
+    <div class="example"><span class="example-label">Try</span><span><em>Chicken salad sandwich and a coke</em></span></div>
+  </div>
+  <div class="tip">
+    <div class="tip-header">
+      <div class="tip-icon">⭐</div>
+      <div class="tip-title">Staples</div>
+    </div>
+    <p>Foods you eat regularly? Save them as staples so you don't have to describe them every time. After logging something, text "save as staple." Next time, just say "log my" followed by the staple name.</p>
+    <div class="example"><span class="example-label">Try</span><span><em>Save as staple</em> — right after logging a food</span></div>
+    <div class="example"><span class="example-label">Try</span><span><em>Log my morning yogurt</em></span></div>
+  </div>
+  <div class="tip">
+    <div class="tip-header">
+      <div class="tip-icon">📊</div>
+      <div class="tip-title">Dashboard</div>
+    </div>
+    <p>Check your daily and weekly totals anytime. Text "dashboard" and Annika will send you a link to your private tracking page — calories, macros, and meals broken down.</p>
+    <div class="example"><span class="example-label">Try</span><span><em>Dashboard</em></span></div>
+  </div>
+  <div class="tip">
+    <div class="tip-header">
+      <div class="tip-icon">☀️</div>
+      <div class="tip-title">Meal names</div>
+    </div>
+    <p>Start your message with a meal name to organize your day. Annika recognizes Morning, Afternoon, Evening, and Snack. This keeps your dashboard organized by meal.</p>
+    <div class="example"><span class="example-label">Try</span><span><em>Breakfast: oatmeal with blueberries</em></span></div>
+  </div>
+  <div class="tip">
+    <div class="tip-header">
+      <div class="tip-icon">🎯</div>
+      <div class="tip-title">Goals</div>
+    </div>
+    <p>Tell Annika your targets and she'll track your progress against them throughout the day.</p>
+    <div class="example"><span class="example-label">Try</span><span><em>Set my calorie goal to 2000</em></span></div>
+    <div class="example"><span class="example-label">Try</span><span><em>I want to stay under 150g carbs</em></span></div>
+  </div>
+  <div class="tip">
+    <div class="tip-header">
+      <div class="tip-icon">📸</div>
+      <div class="tip-title">Nutrition labels</div>
+    </div>
+    <p>Snap a photo of any Nutrition Facts label and send it. Annika reads the label and logs everything automatically. Add a caption with the product name for best results.</p>
+  </div>
+  <div class="tip">
+    <div class="tip-header">
+      <div class="tip-icon">🗑️</div>
+      <div class="tip-title">Delete</div>
+    </div>
+    <p>Logged something by mistake? Just text "delete" followed by the food name and Annika will remove it from your log.</p>
+    <div class="example"><span class="example-label">Try</span><span><em>Delete the apple</em></span></div>
+  </div>
+  <div class="tip">
+    <div class="tip-header">
+      <div class="tip-icon">↩️</div>
+      <div class="tip-title">Cancel</div>
+    </div>
+    <p>Mid-conversation and want to start fresh? Text "cancel" and Annika resets the thread.</p>
+  </div>
+</main>
+<footer class="footer">
+  © 2026 Annika. <a href="/privacy.html">Privacy Policy</a>
+</footer>
+</body>
+</html>
