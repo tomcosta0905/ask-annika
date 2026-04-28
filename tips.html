@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How Annika works</title>
-<meta name="description" content="A quick guide to text-based nutrition tracking with Annika.">
+<title>Help — Annika</title>
+<meta name="description" content="The exact phrasings Annika recognizes. A reference for text-based nutrition tracking.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root {
   --cream: #faf6f1;
@@ -14,6 +14,9 @@
   --brown: #5c3d2e;
   --brown-light: #8a6455;
   --brown-faint: #ede5de;
+  --code-bg: #f1ebe3;
+  --amber: #b8860b;
+  --amber-tint: #fff4d6;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -50,87 +53,138 @@ main {
   padding: 48px 48px 80px;
 }
 
-.hero {
-  padding: 24px 0 40px;
-}
-.eyebrow {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--terracotta);
-  font-weight: 400;
-  margin-bottom: 14px;
-}
+.hero { padding: 24px 0 40px; }
 .hero h1 {
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.6rem;
   line-height: 1.15;
   color: var(--brown);
   margin-bottom: 18px;
 }
 .hero p.subtitle {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--brown-light);
   line-height: 1.6;
-  max-width: 560px;
+  max-width: 620px;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: var(--brown-light);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 620px;
 }
 
 hr.divider {
   border: none;
   border-top: 1px solid var(--brown-faint);
-  margin: 64px 0;
+  margin: 56px 0;
 }
 
 section h2 {
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   line-height: 1.2;
   color: var(--brown);
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 section p {
   font-size: 1rem;
   color: var(--brown);
   line-height: 1.7;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
-.bubble-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 18px 0;
-}
-
-.bubble {
-  background: rgba(201, 130, 107, 0.12);
+.entry { margin: 22px 0; }
+.entry .desc {
   color: var(--brown);
-  padding: 12px 16px;
-  border-radius: 18px;
-  border-bottom-right-radius: 4px;
-  max-width: 80%;
-  font-size: 0.92rem;
-  line-height: 1.45;
-  font-weight: 400;
-}
-
-.bubble-caption {
-  font-size: 0.82rem;
-  color: var(--brown-light);
-  margin-top: 6px;
-  max-width: 80%;
-  text-align: right;
-  line-height: 1.5;
-}
-
-.sublabel {
-  font-size: 0.92rem;
-  color: var(--brown-light);
-  margin-top: 20px;
   margin-bottom: 6px;
+  font-size: 0.98rem;
+}
+.entry .desc strong { font-weight: 500; color: var(--brown); }
+.entry .ex {
+  font-size: 0.92rem;
+  color: var(--brown-light);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.entry .ex .label {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  color: var(--terracotta);
+  margin-right: 8px;
+}
+.entry .ex.fail .label { color: var(--brown-light); }
+
+code {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 0.92em;
+  background: var(--code-bg);
+  color: var(--brown);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.quick-start ol {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.quick-start li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--brown-faint);
+  font-size: 1rem;
+}
+.quick-start li:last-child { border-bottom: none; }
+.quick-start .qs-label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brown-light);
+  margin-bottom: 6px;
+}
+
+.callout {
+  border-left: 3px solid var(--terracotta);
+  background: rgba(201, 130, 107, 0.07);
+  padding: 16px 20px;
+  margin: 28px 0 8px;
+  font-size: 0.95rem;
+  color: var(--brown);
+  line-height: 1.6;
+  border-radius: 0 4px 4px 0;
+}
+
+.sms-box {
+  border-left: 3px solid var(--amber);
+  background: var(--amber-tint);
+  padding: 20px 24px;
+  margin: 0;
+  border-radius: 0 4px 4px 0;
+}
+.sms-box h2 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--brown);
+  margin-bottom: 12px;
+}
+.sms-box p {
+  font-size: 0.95rem;
+  color: var(--brown);
+  line-height: 1.6;
+}
+.sms-box code {
+  background: rgba(184, 134, 11, 0.12);
 }
 
 footer {
@@ -150,6 +204,8 @@ footer a {
   transition: color 0.2s;
 }
 footer a:hover { color: var(--terracotta); }
+.footer-meta { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.footer-updated { font-size: 0.78rem; color: var(--brown-light); }
 
 @media (max-width: 600px) {
   nav { padding: 20px 24px; }
@@ -157,11 +213,10 @@ footer a:hover { color: var(--terracotta); }
   .nav-logo svg { width: 240px; }
   main { padding: 24px 24px 56px; }
   .hero { padding: 16px 0 24px; }
-  .hero h1 { font-size: 2.1rem; }
+  .hero h1 { font-size: 2rem; }
   .hero p.subtitle { font-size: 1rem; }
-  section h2 { font-size: 1.5rem; }
-  hr.divider { margin: 48px 0; }
-  .bubble { max-width: 88%; font-size: 0.9rem; }
+  section h2 { font-size: 1.4rem; }
+  hr.divider { margin: 40px 0; }
   footer {
     padding: 24px;
     flex-direction: column;
@@ -193,188 +248,213 @@ footer a:hover { color: var(--terracotta); }
 <main>
 
   <div class="hero">
-    <div class="eyebrow">User guide</div>
-    <h1>How Annika works</h1>
-    <p class="subtitle">A quick guide to text-based nutrition tracking.</p>
+    <h1>Help — Annika commands</h1>
+    <p class="subtitle">The exact phrasings Annika recognizes. Skim the Quick Start, then dig in as needed.</p>
   </div>
 
+  <section class="intro">
+    <p>Think of Annika as your personal macro tracker &mdash; be specific when you can, general when you want.</p>
+    <p>The commands below give you exact control. Plain English works too &mdash; Annika will do her best to interpret it &mdash; but commands skip the interpretation and go straight to the right action. This page covers everything Annika does.</p>
+  </section>
+
   <hr class="divider">
 
-  <section>
-    <div class="eyebrow">How it works</div>
-    <h2>The basics</h2>
-    <p>Each text you send is a standalone request. Annika doesn't do back-and-forth conversation — just tell her what you need in one message. No app to open, no menus to navigate. Text it, done.</p>
+  <section class="quick-start">
+    <h2>Quick start</h2>
+    <ol>
+      <li>
+        <span class="qs-label">Log food</span>
+        <code>yogurt and blueberries</code>
+      </li>
+      <li>
+        <span class="qs-label">Save a staple</span>
+        <code>add staple greek yogurt 150 cals 20g protein</code>
+      </li>
+      <li>
+        <span class="qs-label">See today's totals</span>
+        <code>check in</code>
+      </li>
+      <li>
+        <span class="qs-label">Break down a macro</span>
+        <code>breakdown protein</code>
+      </li>
+    </ol>
   </section>
 
   <hr class="divider">
 
   <section>
-    <div class="eyebrow">Getting started</div>
-    <h2>Log food</h2>
-    <p>Text what you ate. Annika estimates calories, protein, carbs, fat, fiber, and sodium.</p>
-    <div class="bubble-wrap">
-      <div class="bubble">1 cup plain nonfat yogurt w 1/4 c blueberries</div>
+    <h2>Talking to Annika with Siri</h2>
+
+    <div class="entry">
+      <div class="desc"><strong>Save the number in your contacts.</strong> Add +1-406-510-5510 as a contact named Annika.</div>
     </div>
-    <div class="bubble-wrap">
-      <div class="bubble">2 poached eggs, pinch salt, no butter and 2 slices dry wheat toast</div>
-    </div>
-  </section>
 
-  <hr class="divider">
-
-  <section>
-    <div class="eyebrow">Pro tip</div>
-    <h2>Be specific</h2>
-    <p>The more detail you give, the better the estimate. Include quantities, brands, and cooking methods when you can.</p>
-    <div class="bubble-wrap">
-      <div class="bubble">1/2 cup blueberries</div>
-      <div class="bubble-caption">instead of "some blueberries"</div>
-    </div>
-    <div class="bubble-wrap">
-      <div class="bubble">6 oz grilled salmon</div>
-      <div class="bubble-caption">instead of "salmon"</div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <section>
-    <div class="eyebrow">Snap a photo</div>
-    <h2>Nutrition labels</h2>
-    <p>Snap a photo of any Nutrition Facts label and send it. Annika reads the label and logs it automatically. Add a caption with the product name for best results.</p>
-    <p>Want to save a labeled product as a staple? Send the photo, then text "save as staple" or give it a name like "save as my protein bar." Next time just text "my protein bar."</p>
-  </section>
-
-  <hr class="divider">
-
-  <section>
-    <div class="eyebrow">Anytime</div>
-    <h2>Check in</h2>
-    <p>Ask how your day is going anytime. Annika gives you a quick summary with your totals and how you're tracking against your goals.</p>
-    <div class="bubble-wrap">
-      <div class="bubble">How am I doing</div>
-    </div>
-    <div class="bubble-wrap">
-      <div class="bubble">Check in</div>
+    <div class="entry">
+      <div class="desc"><strong>Send a message by voice.</strong> &ldquo;Siri, text Annika protein shake and two oat pancakes&rdquo; &mdash; Siri dictates, confirms, and sends. Annika's reply comes back as a normal text.</div>
     </div>
   </section>
 
   <hr class="divider">
 
   <section>
-    <div class="eyebrow">Time of day</div>
-    <h2>Meal periods</h2>
-    <p>Annika groups your entries into Morning, Afternoon, and Evening automatically, based on the time you log them.</p>
-  </section>
+    <h2>Logging food</h2>
 
-  <hr class="divider">
-
-  <section>
-    <div class="eyebrow">The details</div>
-    <h2>Breakdown</h2>
-    <p>Want to see the detailed macros on something you logged? Ask for a breakdown — works for individual foods, staples, or a time of day (morning, afternoon, evening).</p>
-    <div class="bubble-wrap">
-      <div class="bubble">Morning breakdown</div>
+    <div class="entry">
+      <div class="desc"><strong>Plain text.</strong> Describe what you ate; Annika estimates the macros.</div>
+      <div class="ex"><span class="label">works</span><code>yogurt and blueberries</code></div>
     </div>
-    <div class="bubble-wrap">
-      <div class="bubble">Afternoon breakdown</div>
+
+    <div class="entry">
+      <div class="desc"><strong>With a quantity.</strong> A leading number multiplies the serving.</div>
+      <div class="ex"><span class="label">works</span><code>2 oatmeal</code></div>
+      <div class="ex fail"><span class="label">won't work</span><code>oatmeal x2</code></div>
     </div>
-  </section>
 
-  <hr class="divider">
+    <div class="entry">
+      <div class="desc"><strong>With your own macros.</strong> Food name first, then the calorie number is required; carbs, protein, fat, fiber, and sodium are optional.</div>
+      <div class="ex"><span class="label">works</span><code>oatmeal 150 cals 27g carbs 5g protein</code></div>
+      <div class="ex fail"><span class="label">won't work</span><code>150 calories oatmeal</code></div>
+    </div>
 
-  <section>
-    <div class="eyebrow">The big picture</div>
-    <h2>Dashboard</h2>
-    <p>Text "dashboard" for a link to your private tracking page — daily and weekly charts, macro breakdowns, and meal details.</p>
-    <div class="bubble-wrap">
-      <div class="bubble">Dashboard</div>
+    <div class="entry">
+      <div class="desc"><strong>Photo of a nutrition label.</strong> Send the photo. On SMS, Annika asks for serving size before logging.</div>
+    </div>
+
+    <div class="callout">
+      Meal periods (Morning, Afternoon, Evening) are assigned automatically by time of day. Don't prefix with <code>breakfast:</code> or <code>lunch:</code> — that becomes part of the food name.
     </div>
   </section>
 
   <hr class="divider">
 
   <section>
-    <div class="eyebrow">Your targets</div>
-    <h2>Goals</h2>
-    <p>Set your own targets. Annika tracks your progress against them all day.</p>
-    <div class="bubble-wrap">
-      <div class="bubble">Set my calorie goal to 1850</div>
-    </div>
-    <div class="bubble-wrap">
-      <div class="bubble">Set protein to 150</div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <section>
-    <div class="eyebrow">Save time</div>
     <h2>Staples</h2>
-    <p>Foods you eat regularly? Save them as staples so you never have to describe them twice. You can save a single food or a whole meal.</p>
-    <div class="bubble-wrap">
-      <div class="bubble">Save as staple</div>
-      <div class="bubble-caption">after logging something</div>
+
+    <div class="entry">
+      <div class="desc"><strong>Add a staple with your own macros.</strong></div>
+      <div class="ex"><span class="label">works</span><code>add staple greek yogurt 150 cals 20g protein</code></div>
     </div>
-    <div class="bubble-wrap">
-      <div class="bubble">Save as my yogurt</div>
-      <div class="bubble-caption">names the staple</div>
+
+    <div class="entry">
+      <div class="desc"><strong>Add a staple and let Annika estimate the macros.</strong></div>
+      <div class="ex"><span class="label">works</span><code>add staple greek yogurt</code></div>
     </div>
-    <div class="bubble-wrap">
-      <div class="bubble">My yogurt</div>
-      <div class="bubble-caption">logs the whole staple instantly</div>
+
+    <div class="entry">
+      <div class="desc"><strong>Add a staple from a label photo.</strong> Send the photo with a caption like <code>add staple greek yogurt</code>.</div>
     </div>
-    <div class="bubble-wrap">
-      <div class="bubble">Show staples</div>
-      <div class="bubble-caption">see your saved list</div>
+
+    <div class="entry">
+      <div class="desc"><strong>Save the last thing you logged as a staple.</strong></div>
+      <div class="ex"><span class="label">works</span><code>save that as oatmeal bowl</code></div>
     </div>
-    <div class="bubble-wrap">
-      <div class="bubble">Rename morning coffee to iced coffee</div>
+
+    <div class="entry">
+      <div class="desc"><strong>Use a staple.</strong> Text its name on its own, or alongside other foods.</div>
+      <div class="ex"><span class="label">works</span><code>greek yogurt</code></div>
+      <div class="ex"><span class="label">works</span><code>greek yogurt and a coffee</code></div>
+    </div>
+
+    <div class="entry">
+      <div class="desc"><strong>List your staples.</strong></div>
+      <div class="ex"><span class="label">works</span><code>staples</code></div>
+      <div class="ex"><span class="label">works</span><code>show my staples</code></div>
+    </div>
+
+    <div class="entry">
+      <div class="desc"><strong>Delete a staple.</strong></div>
+      <div class="ex"><span class="label">works</span><code>delete staple oatmeal</code></div>
+    </div>
+
+    <div class="entry">
+      <div class="desc"><strong>Rename a staple.</strong></div>
+      <div class="ex"><span class="label">works</span><code>rename oatmeal to oats</code></div>
+    </div>
+
+    <div class="callout">
+      To change a staple's macros, delete it and re-add. No edit-in-place yet.
     </div>
   </section>
 
   <hr class="divider">
 
   <section>
-    <div class="eyebrow">Oops</div>
-    <h2>Fixing mistakes</h2>
-    <p>Logged something wrong? Delete it and re-log. Deleting and re-adding takes two quick texts.</p>
-    <div class="bubble-wrap">
-      <div class="bubble">Delete the apple</div>
+    <h2>Reviewing your day</h2>
+
+    <div class="entry">
+      <div class="desc"><strong>Today's totals.</strong></div>
+      <div class="ex"><span class="label">works</span><code>check in</code></div>
+      <div class="ex"><span class="label">works</span><code>totals</code></div>
+      <div class="ex"><span class="label">works</span><code>where am i</code></div>
     </div>
-    <div class="bubble-wrap">
-      <div class="bubble">Delete my last entry</div>
+
+    <div class="entry">
+      <div class="desc"><strong>Break down a single macro.</strong></div>
+      <div class="ex"><span class="label">works</span><code>breakdown protein</code></div>
+      <div class="ex"><span class="label">works</span><code>breakdown sodium</code></div>
     </div>
-    <p class="sublabel">To remove a saved staple:</p>
-    <div class="bubble-wrap">
-      <div class="bubble">Delete staple peanut butter</div>
+
+    <div class="entry">
+      <div class="desc"><strong>Break down a meal period, optionally by macro.</strong></div>
+      <div class="ex"><span class="label">works</span><code>breakdown morning</code></div>
+      <div class="ex"><span class="label">works</span><code>breakdown evening protein</code></div>
+    </div>
+
+    <div class="entry">
+      <div class="desc"><strong>Open your dashboard.</strong></div>
+      <div class="ex"><span class="label">works</span><code>dashboard</code></div>
+    </div>
+
+    <div class="entry">
+      <div class="desc"><strong>Delete a logged item.</strong></div>
+      <div class="ex"><span class="label">works</span><code>delete oatmeal</code></div>
+      <div class="ex"><span class="label">works</span><code>delete last</code></div>
+    </div>
+
+    <div class="entry">
+      <div class="desc"><strong>Cancel an in-progress conversation.</strong></div>
+      <div class="ex"><span class="label">works</span><code>never mind</code></div>
+    </div>
+
+    <div class="callout">
+      For yesterday or weekly totals, open the dashboard. Annika doesn't answer historical questions by text yet.
     </div>
   </section>
 
   <hr class="divider">
 
   <section>
-    <div class="eyebrow">Need a hand</div>
-    <h2>Help</h2>
-    <p>Forget a command? Text "help" for a quick summary and a link back to this guide.</p>
-    <div class="bubble-wrap">
-      <div class="bubble">Help</div>
+    <h2>Goals</h2>
+
+    <div class="entry">
+      <div class="desc"><strong>Set a goal.</strong> Works for calories, protein, carbs, fat, fiber, and sodium.</div>
+      <div class="ex"><span class="label">works</span><code>set my protein goal to 120</code></div>
+      <div class="ex"><span class="label">works</span><code>protein 120g</code></div>
+      <div class="ex"><span class="label">works</span><code>change carbs to 250</code></div>
+    </div>
+
+    <div class="entry">
+      <div class="desc"><strong>See your goals.</strong></div>
+      <div class="ex"><span class="label">works</span><code>my goals</code></div>
+      <div class="ex"><span class="label">works</span><code>show goals</code></div>
+      <div class="ex"><span class="label">works</span><code>targets</code></div>
     </div>
   </section>
 
   <hr class="divider">
 
-  <section>
-    <div class="eyebrow">One more thing</div>
-    <h2>Good to know</h2>
-    <p>Annika works best with simple, one-at-a-time requests. She can't edit numbers on something you already logged or pick up a conversation thread — but she's fast. If something's off, just delete it and re-log. Two texts, done.</p>
+  <section class="sms-box">
+    <h2>For SMS users</h2>
+    <p>Don't text <code>STOP</code>, <code>START</code>, <code>HELP</code>, <code>CANCEL</code>, <code>END</code>, <code>QUIT</code>, or <code>UNSUBSCRIBE</code> &mdash; your carrier intercepts these as opt-out keywords and Annika won't see them. To cancel a back-and-forth, use <code>never mind</code> instead.</p>
   </section>
 
 </main>
 
 <footer>
   <p>© 2026 Annika. Nutrition tracking, simplified.</p>
-  <div>
+  <div class="footer-meta">
+    <span class="footer-updated">Last updated: April 28, 2026</span>
     <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a>
   </div>
 </footer>
