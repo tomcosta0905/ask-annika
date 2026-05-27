@@ -7,6 +7,7 @@
   <meta name="description" content="Annika is an SMS nutrition tracker. No app. No login. Just text what you ate.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -19,7 +20,10 @@
     html { font-size: 16px; scroll-behavior: smooth; }
     body { background: var(--cream); color: var(--brown); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6; min-height: 100vh; }
     nav { padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo svg { display: block; width: 320px; height: auto; }
+    .nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;}
+    .nav-mark{display:block;flex-shrink:0;}
+    .nav-name{font-family:'DM Serif Display',serif;font-size:26px;color:#5c3d2e;letter-spacing:.01em;}
+    @media(max-width:600px){.nav-name{font-size:23px;}.nav-mark{width:36px;height:36px;}}
     .nav-links { display: flex; gap: 24px; }
     nav a { color: var(--brown-light); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.2s; }
     nav a:hover { color: var(--terracotta); }
@@ -75,16 +79,15 @@
 <body>
 <nav>
   <a href="/" class="nav-logo">
-    <svg width="160" height="48" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(20,30)">
-        <path d="M12,0 L34,0 Q46,0 46,12 L46,26 Q46,38 34,38 L36,38 L42,52 L26,38 L12,38 Q0,38 0,26 L0,12 Q0,0 12,0 Z" fill="#c9826b"/>
-        <circle cx="11" cy="19" r="3" fill="#faf6f1" opacity="0.95"/>
-        <circle cx="23" cy="19" r="3" fill="#faf6f1" opacity="0.95"/>
-        <circle cx="35" cy="19" r="3" fill="#faf6f1" opacity="0.95"/>
-        <text x="60" y="28" font-family="'DM Sans', Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="300" letter-spacing="5" fill="#5c3d2e">annika</text>
-        <text x="62" y="48" font-family="'DM Sans', Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" letter-spacing="1.4" fill="#c9826b">just text it.</text>
+    <svg class="nav-mark" viewBox="-64 -64 128 128" width="40" height="40" aria-hidden="true">
+      <circle r="50" fill="none" stroke="#c9826b" stroke-width="4"/>
+      <circle cx="35" cy="-35" r="9" fill="#faf6f1"/>
+      <g fill="none" stroke="#c9826b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="0" y1="-27" x2="-20" y2="29"/><line x1="0" y1="-27" x2="20" y2="29"/><line x1="-12.5" y1="9" x2="12.5" y2="9"/>
       </g>
+      <circle cx="35" cy="-35" r="6.5" fill="#c9826b"/>
     </svg>
+    <span class="nav-name">Annika</span>
   </a>
   <div class="nav-links">
     <a href="tips.html">Tips</a>
